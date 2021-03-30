@@ -24,14 +24,14 @@ function draw() {
   var textY = windowHeight*0.9;
 
   var hourCenter = width/6;
-  var hourAngle = map((hour()-1) % 12, 0, 12, startAngle, stopAngle);
+  var hourAngle = map((hour()) % 12, 0, 12, startAngle, stopAngle);
   arc(hourCenter + shake4, y + shake4, each, each, startAngle, hourAngle);
-  text(nf(twelveHour()-1, 2), hourCenter, textY);
+  text(nf(twelveHour(), 2), hourCenter, textY);
 
   var minuteCenter = width/2;
-  var minuteAngle = map(minute()-30, 0, 60, startAngle, stopAngle);
+  var minuteAngle = map(minute(), 0, 60, startAngle, stopAngle);
   arc(minuteCenter + shake3, y + shake3, each, each, startAngle, minuteAngle);
-  text(nf(minute()-30, 2), minuteCenter, textY);
+  text(nf(minute(), 2), minuteCenter, textY);
 
   var secondCenter = 5*width/6;
   var secondAngle = map(second(), 0, 60, startAngle, stopAngle);
