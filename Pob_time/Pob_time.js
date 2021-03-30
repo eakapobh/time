@@ -1,9 +1,6 @@
-// (c) Fathom Information Design BY-NC-SA
-// https://creativecommons.org/licenses/by-nc-sa/4.0
-
 
 function setup() {
-  createCanvas(1200, 800);
+  createCanvas(windowWidth, windowHeight);
 }
 
 
@@ -23,8 +20,8 @@ function draw() {
   var shake4 = random(0, hour()/30);
 
   var y = height/2;
-  var each = width/3.5;
-  var textY = height*0.8;
+  var each = windowWidth/3.5;
+  var textY = windowHeight*0.9;
 
   var hourCenter = width/6;
   var hourAngle = map((hour()-1) % 12, 0, 12, startAngle, stopAngle);
